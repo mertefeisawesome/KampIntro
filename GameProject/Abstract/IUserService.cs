@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameProject.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,10 +7,9 @@ namespace GameProject.Abstract
 {
     interface IUserService
     {
-        void SignUp();
+        void SignUp(User user, ref int userID);
         void ListInfo(User user);
-        void ListGames();
-        void UpdateInfo();
-        void DeleteUser();
+        void UpdateInfo(User user);
+        void DeleteUser(User user);
     }
 }

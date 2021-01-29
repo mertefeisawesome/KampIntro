@@ -7,7 +7,6 @@ namespace GameProject.Abstract
 {
     interface IGameService
     {
-        float ReturnPrice(Game game);
-        float MakeDiscount(Game game, int percent);
+        float ReturnPrice(Game game, int discountPercent);
     }
 }

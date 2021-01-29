@@ -8,14 +8,17 @@ namespace GameProject.Concrete
 {
     class GameManager : IGameService
     {
-        public float MakeDiscount(Game game, int percent)
+        public float ReturnPrice(Game game, int discountPercent = 0)
         {
-            return game.Price * (1 - percent / 100);
-        }
-
-        public float ReturnPrice(Game game)
-        {
-            return game.Price;
+            if (discountPercent == 0) 
+            {
+                return game.Price;
+            }
+            else
+            {
+                return game.Price * (1 - discountPercent / 100);
+            }
+            
         }
     }
 }
